@@ -1,0 +1,5 @@
+Q&A how come the cli interacts with differents applications?
+
+A1 : 
+A2 : 
+A3 : 
