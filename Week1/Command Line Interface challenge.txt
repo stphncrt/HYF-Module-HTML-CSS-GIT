@@ -1,5 +1,5 @@
-Q&A how come the cli interacts with differents applications?
 
-A1 : 
-A2 : 
-A3 : 
+
+A1 : touch .hidden.txt   /   ls -a  => creates a hidden file and second command show all files and folders.
+A2 : mkdir -p one/two/three/four => creates four nested folders
+A3 : echo type any string >> hidden.txt   => appends "type any string" as a new line.
