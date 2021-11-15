@@ -1,4 +1,4 @@
-:root {
+    :root {
     --primary: #17a095;
 }
 
@@ -90,8 +90,8 @@ li {
 .titleContainer {
     width: 70%;
     background-color: var(--primary);
-    border-top-right-radius: 1rem;
-    border-bottom-right-radius: 1rem;
+    border-top-right-radius: 1.3rem;
+    border-bottom-right-radius: 1.3rem;
 }
 
 @media only screen and (max-width: 600px) {
@@ -123,11 +123,6 @@ li {
     .skills,
     .hobbies,
     .languages {
-        font-size: 11px;
         padding: 1rem;
         margin-left: 2rem;
     }
-    a {
-        font-size: 12px;
-    }
-}
