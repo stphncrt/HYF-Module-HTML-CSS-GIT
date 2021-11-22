@@ -1,4 +1,4 @@
-    :root {
+:root {
     --primary: #17a095;
 }
 
@@ -7,7 +7,10 @@ body {
     font-size: 18px;
 }
 
-.page {
+
+/*=====================SideBar================*/
+
+.page-wrapper {
     width: 70%;
     display: flex;
     flex-direction: row;
@@ -28,6 +31,7 @@ body {
 .photo {
     border-radius: 50%;
     align-self: center;
+    width: 45%;
 }
 
 .info p,
@@ -47,7 +51,7 @@ label {
     color: #fff;
 }
 
-.infoTitle,
+.info-title,
 .info,
 .hobby {
     color: #fff;
@@ -87,7 +91,7 @@ li {
     margin: 1rem;
 }
 
-.titleContainer {
+.title-container {
     width: 70%;
     background-color: var(--primary);
     border-top-right-radius: 1.3rem;
@@ -126,3 +130,4 @@ li {
         padding: 1rem;
         margin-left: 2rem;
     }
+}
