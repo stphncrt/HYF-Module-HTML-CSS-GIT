@@ -111,7 +111,8 @@ nav ul li:hover {
 
 .uber-information {
     background-color: #fff;
-    flex-direction: column;
+    /* flex-direction: column; */
+    display: grid;
 }
 
 .uber-paid-wrapper {
@@ -215,7 +216,6 @@ nav ul li:hover {
     display: flex;
     flex-flow: row wrap;
     gap: 2rem;
-    border: 1px solid red;
 }
 
 .safety-content {
@@ -281,7 +281,6 @@ nav ul li:hover {
 
 .uber-wrapper {
     background-color: #f6f6f6;
-    flex-wrap: wrap;
 }
 
 .download {
@@ -379,14 +378,13 @@ footer h2 {
 footer section {
     display: flex;
     gap: 4rem;
-    flex-wrap: wrap;
 }
 
 footer hr {
     max-width: max-content;
 }
 
-footer p:hover {
+footer a:hover {
     color: #afafaf;
     font-weight: 300;
 }
@@ -408,6 +406,8 @@ footer p:hover {
 
 a {
     color: #fff;
+    text-decoration: none;
+    font-size: 15px;
 }
 
 .appstores img {
@@ -425,6 +425,11 @@ a {
     margin: 2rem 0 0 0;
 }
 
+#contacts {
+    align-items: center;
+    margin-top: 3rem;
+}
+
 @media (min-width: 1024px) {
     .uber-information {
         width: 42%;
@@ -440,6 +445,9 @@ a {
 }
 
 @media (max-width: 1136px) {
+    :root {
+        --primary-font-size: 32px;
+    }
     .uber-wrapper {
         flex-wrap: wrap;
     }
@@ -456,9 +464,6 @@ a {
     }
     nav ul {
         justify-content: space-between;
-    }
-    :root {
-        --primary-font-size: 32px;
     }
     #safety {
         padding: 0.5rem;
@@ -491,5 +496,10 @@ a {
     }
     #uber-for-business img {
         min-height: 11rem;
+    }
+    footer section {
+        display: flex;
+        gap: 4rem;
+        flex-wrap: wrap;
     }
 }
