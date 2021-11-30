@@ -1,13 +1,30 @@
 html,
 body {
-    font-size: 20px;
     margin: 0;
-    padding: 0;
     font-family: UberMoveText, system-ui, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: UberMoveText, system-ui, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 20px;
 }
 
 :root {
-    --primary-font-size: 40px;
+    --navfooter-font-size: 16px;
+    --primary-font-size: 36px;
+}
+
+.nfs {
+    font-size: var(--navfooter-font-size);
+}
+
+.tfs {
+    font-size: 40px;
+}
+
+.ntfs {
+    font-size: 24px;
+}
+
+.alb {
+    align-items: flex-start;
 }
 
 .fr {
@@ -20,39 +37,78 @@ body {
     flex-direction: column;
 }
 
-.fw {
-    flex-wrap: wrap;
+.dg {
+    display: grid;
 }
 
 .gs {
     gap: 1rem;
+    margin: 0;
 }
 
 .gm {
     gap: 2rem;
 }
 
+.mh {
+    max-height: 2rem;
+}
 
-/*================Navbar===================*/
+.wdn {
+    display: none;
+}
 
-nav {
+.lb {
+    border-bottom: 1px solid rgba(51, 51, 51, 0.3);
+    width: fit-content;
+}
+
+.tlb {
+    border-bottom: 5px solid #000;
+}
+
+.flow_underline {
+    position: relative;
+}
+
+.flow_underline::after {
+    content: "";
+    position: absolute;
+    background-color: black;
+    height: 1px;
+    width: 0;
+    left: 0;
+    bottom: -2px;
+    transition: 0.4s;
+}
+
+.flow_underline:hover:after {
+    width: 100%;
+}
+
+
+/*==================Navbar================*/
+
+.nav-container {
+    margin: 0;
+    padding: 0rem 2rem 0rem 2rem;
+    list-style: none;
+    justify-items: flex-start;
+    align-items: center;
+    color: #fff;
     background-color: #000;
 }
 
-nav ul {
+.ul {
     list-style: none;
-    color: #fff;
-    gap: 2rem;
-    margin: 0 4rem 0 4rem;
-    padding: 0.5rem;
-    font-size: 15px;
-    font-weight: 500;
-    align-items: center;
+    gap: 1rem;
 }
 
-nav ul li {
-    padding: 0.5rem;
-    margin: 0;
+.covid,
+.login,
+.products,
+.global {
+    min-width: fit-content;
 }
 
 nav ul li:hover {
@@ -61,82 +117,51 @@ nav ul li:hover {
     padding: 0.5rem;
 }
 
-.EN {
+nav ul li {
+    padding: 0.5rem;
+    margin: 0;
+}
+
+nav ul.third {
     margin-left: auto;
 }
 
 .sign-up {
+    grid-area: sign-up;
     background-color: #fff;
     color: #000;
     border-radius: 1.5rem;
     padding: 0.5rem;
+    min-width: 3.5rem;
+    text-align: center;
 }
 
 .sign-up:hover {
-    background-color: #e2e2e2;
+    background-color: #e4e0e0;
 }
 
 .uber {
     font-size: 24px;
-    font-weight: 400;
 }
 
 
-/*===============MAin==============*/
+/*==================Get paid=================*/
 
-
-/*==========get-paid section================*/
-
-#get-paid img {
-    width: 100%;
-}
-
-.uber-type {
-    background-color: #fdfdfd;
-    height: 8rem;
-    border-bottom: 1px solid gray;
-    display: flex;
-    justify-content: space-evenly;
-    margin-bottom: 0;
-}
-
-.uber-type p {
-    font-size: 14px;
-    font-weight: 500;
-}
-
-.uber-type p:hover {
-    color: #545454;
-}
-
-.uber-information {
-    background-color: #fff;
-    /* flex-direction: column; */
+.uber-paid-wrap {
     display: grid;
+    position: absolute;
+    background-color: #fff;
+    margin: 7%;
+    /* padding: 2.5rem; */
+    max-width: 30rem;
 }
 
-.uber-paid-wrapper {
-    padding: 0 3rem 3rem 3rem;
+.hdn img {
+    width: 100%;
+    margin-bottom: -0.5rem;
 }
 
-.uber-information h1 {
-    font-size: 52px;
-    font-weight: 500;
-    margin-top: 2rem;
-    padding-right: 3rem;
-}
-
-.uber-information :nth-child(3) {
-    font-size: 24px;
-    font-weight: 400;
-}
-
-.uber-information :nth-child(5) {
-    font-size: 32px;
-    font-weight: 400;
-}
-
-.uber-information button {
+.uber-paid-wrap button {
     font-size: 20px;
     color: #fff;
     font-weight: 500;
@@ -145,10 +170,15 @@ nav ul li:hover {
     height: 3rem;
 }
 
+.uber-type {
+    justify-content: space-around;
+    background-color: #fcfcfc;
+}
+
 .icon-wrapper {
     align-items: center;
     justify-content: flex-start;
-    width: 3rem;
+    width: 5rem;
 }
 
 .icon-wrapper p {
@@ -159,17 +189,95 @@ nav ul li:hover {
     margin: 1rem;
 }
 
-
-/*=========Uber for Business============*/
-
-.business-information {
-    position: absolute;
-    margin-left: 5rem;
-    z-index: 1;
-    margin-top: 5rem;
+.get-wrapper {
+    margin: 0 2.5rem 0 2.5rem;
 }
 
-.business-information button {
+.uber-paid-wrap h1 {
+    font-size: 50px;
+}
+
+
+/*==========safety==============*/
+
+#safety {
+    margin: 0;
+    padding: 0 7% 0 7%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: "safety-title  safety-title" "img-first img-second" "our setting" "with the" "p-wrapper view";
+}
+
+#safety p {
+    max-width: 558px;
+}
+
+#safety div {
+    max-width: 558px;
+}
+
+.safety-title {
+    grid-area: safety-title;
+}
+
+.img-first {
+    grid-area: img-first;
+    margin-right: 1rem;
+}
+
+.img-second {
+    grid-area: img-second;
+}
+
+.our {
+    grid-area: our;
+}
+
+.setting {
+    grid-area: setting;
+}
+
+.with {
+    grid-area: with;
+}
+
+.the {
+    grid-area: the;
+}
+
+.p-wrapper {
+    grid-area: p-wrapper;
+    gap: 1rem;
+}
+
+.view {
+    grid-area: view;
+}
+
+.safety-wrapper {
+    display: grid;
+}
+
+#safety img {
+    width: 90%;
+}
+
+.p-wrapper {
+    justify-content: flex-start;
+}
+
+
+/* =================Uber businesss===================*/
+
+#uber-for-business {
+    display: grid;
+    background-image: url("https://www.uber-assets.com/image/upload/v1613106985/assets/0e/47aa71-35cb-459a-a975-78c61ea300e2/original/HP-U4B-NYC-bkg.png");
+    padding: 7%;
+    background-size: cover;
+}
+
+.uber-paid-wrapper button {
     font-size: 20px;
     color: #fff;
     font-weight: 500;
@@ -178,64 +286,31 @@ nav ul li:hover {
     height: 3rem;
 }
 
-.business-information h1 {
-    font-size: var(--primary-font-size);
-    font-weight: 500;
-    margin: 0;
-}
-
-.business-information p {
-    font-size: 20px;
-    font-weight: 400;
-}
-
-#uber-for-business img {
-    width: 100%;
-    height: auto;
-    margin-top: -1rem;
+.uber-paid-wrapper img {
+    width: auto;
 }
 
 
-/*==========safety==============*/
+/*=============About us==================*/
 
-#safety {
-    margin: 0;
-    padding: 4rem;
-    padding-top: 0;
+#about-us {
+    margin: 5rem 0rem;
+    padding: 0 7% 0 7%;
 }
 
-#safety img {
-    width: 100%;
+#about-us a {
+    text-decoration: none;
+    color: #000;
 }
 
-#safety-wrapper>p {
-    font-size: 40px;
-}
-
-#content-wrapper {
-    display: flex;
-    flex-flow: row wrap;
-    gap: 2rem;
-}
-
-.safety-content {
-    display: flex;
-    flex-direction: column;
-    font-size: 20px;
-}
-
-.line-container {
-    display: grid;
-    grid-template-columns: minmax(auto, 30rem);
-}
-
-.line-container p:first-child {
+#about-us h4 {
     font-size: 22px;
     font-weight: 500;
+    margin: 1rem 0 0 0;
 }
 
-.line-bottom p {
-    border-bottom: 1px solid rgba(51, 51, 51, 0.3);
+#about-us p {
+    margin-bottom: 2rem;
 }
 
 
@@ -330,176 +405,208 @@ nav ul li:hover {
 }
 
 
-/*==============Footer==================*/
+/* ======================footer====================*/
 
 footer {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto;
+    grid-template-areas: "header . . ." "company products global travel" "social-icons english . appstores " "inc . . judicial";
     background-color: #000;
     color: #fff;
-    font-size: 20px;
-    font-weight: 400;
+    padding: 3rem;
+    gap: 3rem;
 }
 
-footer p {
-    font-size: 16px;
+footer header {
+    grid-area: header;
+    height: 6rem;
 }
 
-footer #wrapper {
-    padding: 5rem;
+footer i {
+    color: #fff;
 }
 
-footer header div {
-    width: max-content;
+footer a {
+    text-decoration: none;
+    color: #fff;
 }
 
 #header-p {
     padding-bottom: 3rem;
+    height: 4rem;
 }
 
 #header-p:hover {
     color: #fff;
     border-bottom: 2px solid #fff;
     font-weight: 400;
-}
-
-.header-p {
-    height: 5rem;
-}
-
-header hr {
-    border-top: 2px solid white;
-    width: 5rem;
-}
-
-footer h2 {
-    font-size: 24px;
-    font-weight: 600;
-}
-
-footer section {
-    display: flex;
-    gap: 4rem;
-}
-
-footer hr {
-    max-width: max-content;
+    max-width: fit-content;
+    text-decoration: none;
 }
 
 footer a:hover {
     color: #afafaf;
-    font-weight: 300;
+    text-decoration: underline;
 }
 
-.footer-column {
-    width: 13rem;
+footer h4 {
+    font-size: 20px;
 }
 
-#company {
-    justify-content: space-between;
-    font-size: 14px;
-    font-weight: 100;
-    color: #afafaf;
+.company-title {
+    grid-area: company;
+}
+
+.products-title {
+    grid-area: products;
+}
+
+.global-title {
+    grid-area: global;
+}
+
+.travel-title {
+    grid-area: travel;
 }
 
 .social-icons {
+    grid-area: social-icons;
+    color: #fff;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
     align-items: center;
 }
 
-a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 15px;
-}
-
-.appstores img {
-    width: 7rem;
+.english {
+    grid-area: english;
+    /* display: flex; */
+    /* grid-template-columns: repeat(2, 1fr); */
 }
 
 .appstores {
-    margin-left: auto;
-    justify-content: flex-end;
-    gap: 0.5rem;
-    align-items: center;
+    grid-area: appstores;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    gap: 1rem;
 }
 
-#company {
-    margin: 2rem 0 0 0;
+.inc {
+    grid-area: inc;
 }
 
-#contacts {
-    align-items: center;
-    margin-top: 3rem;
+.judicial {
+    grid-area: judicial;
+    display: grid;
+    grid-template-columns: 1fr 1.7fr 1.4fr;
 }
 
-@media (min-width: 1024px) {
-    .uber-information {
-        width: 42%;
-        height: 75%;
-        position: absolute;
-        background-color: #fff;
-        margin-left: 10%;
-        z-index: 1;
-        margin-top: 5rem;
-        display: flex;
-        flex-direction: column;
+@media (max-width: 1024px) {
+    footer {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto;
+        grid-template-areas: "header . " "company products" " global travel" "social-icons ." " english  appstores " "inc judicial";
+        background-color: #000;
+        color: #fff;
+        gap: 3rem 3rem;
+        padding: 3rem;
     }
-}
-
-@media (max-width: 1136px) {
-    :root {
-        --primary-font-size: 32px;
+    .content-wrapper {
+        grid-template-columns: 1fr;
     }
-    .uber-wrapper {
-        flex-wrap: wrap;
+    .uber-paid-wrap {
+        position: relative;
+        margin: 0;
+        padding: 0;
     }
-    #sign-up {
-        padding: 0.5rem;
-        gap: 2rem;
-        margin: 2rem;
-    }
-    .sign-up-wrapper {
-        min-width: 500px;
-    }
-    .hdn {
+    .dn {
         display: none;
     }
-    nav ul {
-        justify-content: space-between;
+    .tfs {
+        font-size: 30px;
+    }
+    .mfc {
+        flex-direction: column;
+    }
+    .wdn {
+        display: block;
     }
     #safety {
-        padding: 0.5rem;
-    }
-    #safety-wrapper {
-        padding: 0.5rem;
-        flex-wrap: wrap;
+        margin: 0;
+        padding: 0 0.5rem 0 0.5rem;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        grid-template-areas: "safety-title" "img-first" "our" "with" "p-wrapper" "img-second" "setting" " the" " view";
     }
     .download-wrapper {
         padding: 0.5rem;
     }
-    .business-information {
-        position: absolute;
-        margin-left: 0.1rem;
-        z-index: 1;
-        margin-top: 0.1rem;
-    }
-    .business-information button {
-        font-size: 14px;
-        color: #fff;
-        font-weight: 500;
-        background-color: #000;
+    #download-app #first {
         width: 4rem;
-        height: 2rem;
+        height: 4rem;
+        font-size: 30px;
+        margin: 0.1rem;
     }
-    .business-information h1 {
-        font-size: var(--primary-font-size);
-        font-weight: 500;
+    #first h1,
+    #first i {
+        padding: 0.1rem 0.2rem 0.1rem 0.2rem;
         margin: 0;
+        font-size: 24px;
     }
-    #uber-for-business img {
-        min-height: 11rem;
+    #first h1 {
+        font-weight: 400;
     }
-    footer section {
-        display: flex;
-        gap: 4rem;
-        flex-wrap: wrap;
+    #sign-up {
+        padding: 0.5rem;
+        gap: 1rem;
+    }
+    .sign-up-wrapper {
+        width: 100%;
+    }
+    .sign-up-wrapper h1 {
+        font-size: 30px;
+        font-weight: 500;
+    }
+    .sign-up-wrapper i {
+        font-size: 1.5rem;
+    }
+    @media (max-width: 600px) {
+        footer {
+            grid-template-columns: 1fr;
+            grid-template-rows: auto;
+            grid-template-areas: "header" "company" "products" "global" "travel" "social-icons" "english" "appstores" "inc" "judicial";
+            padding: 0.5rem;
+        }
+        .uber-paid-wrap {
+            padding: 0.5rem;
+            width: fit-content;
+            font-size: 20px;
+        }
+        .uber-paid-wrap h1 {
+            font-size: 36px;
+        }
+        #safety {
+            padding: 0.5rem;
+        }
+        .nav-container {
+            justify-content: center;
+        }
+        .third {
+            gap: 0;
+        }
+        .sign-up {
+            padding: 0.5rem;
+            align-self: center;
+        }
+        .sign-up:hover {
+            padding: 0.4rem;
+        }
+        #about-us {
+            display: grid;
+            gap: 2rem;
+        }
     }
 }
